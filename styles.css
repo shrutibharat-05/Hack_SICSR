@@ -136,3 +136,174 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+
+/* Flexbox layout for the container to display 3 cards per row */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ensure spacing between cards */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+}
+
+/* Card styles */
+.card {
+    border: 3px solid #2e7d32; /* Dark green for border to represent sustainability */
+    border-radius: 8px;
+    padding: 15px;
+    margin: 10px;
+    width: 30%; /* Ensures three cards per row */
+    background-color: #e8f5e9; /* Light green background */
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 15px rgba(0, 128, 0, 0.3); /* Green shadow on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Image within the card */
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Text styling */
+.card h2 {
+    color: #1b5e20; /* Dark green for headings */
+    margin: 10px 0;
+    text-align: center;
+}
+
+.card p {
+    color: #4e342e; /* Earthy brown for text */
+    margin: 5px 0;
+    text-align: center;
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 1024px) {
+    .card {
+        width: 45%; /* Two cards per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 100%; /* One card per row on small screens */
+    }
+}
+
+
+
+
+
+/* Blog Post Section */
+.blog-posts .post {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-bottom: 2px solid #ddd;
+}
+
+.blog-posts h2 {
+    font-size: 1.8rem;
+    color: #1b4332;
+    margin-bottom: 10px;
+}
+
+.blog-posts p {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.blog-posts ul {
+    margin-left: 20px;
+}
+
+.blog-posts li {
+    color: #495057;
+}
+
+.blog-posts h3 {
+    color: #40916c;
+    margin-top: 20px;
+}
+
+/* Share Experience Section */
+.share-experience {
+    background-color: #e9ecef;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.share-experience h2 {
+    font-size: 2rem;
+    color: #1b4332;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.share-experience form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.share-experience label {
+    font-weight: bold;
+    color: #1b4332;
+}
+
+.share-experience input[type="text"],
+.share-experience input[type="email"],
+.share-experience textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.share-experience button {
+    background-color: #2d6a4f;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.share-experience button:hover {
+    background-color: #1b4332;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .blog-posts h2 {
+        font-size: 1.5rem;
+    }
+
+    .share-experience h2 {
+        font-size: 1.8rem;
+    }
+}
+.styled-img {
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 5px solid #4CAF50;
+    width: 250px;
+    height: 250px;
+}

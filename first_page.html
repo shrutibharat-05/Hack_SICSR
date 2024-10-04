@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treedex - Tree Afforestation Initiative</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+        /* Navbar Styles */
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color:  #2d6a4f;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            text-align: center;
+            font-size: 16px;
+        }
+        .navbar a:hover {
+            background-color: #3e8e41;
+            border-radius: 4px;
+        }
+        .navbar-logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 80vh;
+            background-image: url('https://www.classy.org/wp-content/uploads/2023/03/blog_x-impressive-tree-planting-organizations-exceeding-expectations.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            color: white;
+            text-align: left;
+            padding-left: 50px;
+        }
+
+        /* Motto Styles */
+        .hero .motto {
+            font-size: 48px;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+        .hero p {
+            font-size: 24px;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+            margin-top: 10px;
+        }
+
+        /* Button Styles */
+        .hero .btn-join {
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: #181918;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .hero .btn-join:hover {
+            background-color: #3e8e41;
+        }
+
+        /* Counter Section Styles */
+        .counter-section {
+            background-color: #f5f5f5;
+            text-align: center;
+            padding: 50px 0;
+        }
+        .counter-section h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        .counter {
+            font-size: 80px; /* Making the counter number very large */
+            font-weight: bold;
+            color: #4CAF50;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero .motto {
+                font-size: 32px;
+            }
+            .hero p {
+                font-size: 18px;
+            }
+            .counter-section h2 {
+                font-size: 36px;
+            }
+            .counter {
+                font-size: 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav class="navbar">
+        <div class="navbar-logo">Treedex</div>
+        <a href="#home">Home</a>
+        <a href="#login">Login</a>
+        <a href="#about">About Us</a>
+        <a href="#projects">Projects/Initiatives</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact Us</a>
+        <a href="#community">Community Events</a>
+        <a href="#gov-schemes">Government Schemes</a>
+        <a href="#ngos">NGOs Partnership</a>
+        <a href="#graph">Graph</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <div class="motto">"Plant a Tree, Save the Future"</div>
+            <p>Join hands with us in our afforestation journey</p>
+            <a href="signup.html" class="btn-join">Join Us</a>
+        </div>
+    </section>
+
+    <!-- Counter Section -->
+    <section class="counter-section">
+        <h2>Trees Planted So Far</h2>
+        <div class="counter" id="tree-counter">104532</div>
+    </section>
+
+    <script>
+        // Counter Script
+        let counterElement = document.getElementById('tree-counter');
+        let counterValue = 104532; // Starting count
+
+        // Function to increment the counter
+        function incrementCounter() {
+            counterValue++;
+            counterElement.textContent = counterValue.toLocaleString(); // Formatting with commas
+        }
+
+        // Increment the counter every 5 seconds (5000 milliseconds)
+        setInterval(incrementCounter, 5000);
+    </script>
+
+</body>
+</html>

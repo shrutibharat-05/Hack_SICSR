@@ -5,6 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Sustainability Project</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light gray background */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+h1 {
+    text-align: center;
+    color: #333; /* Dark text color */
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold; /* Bold labels */
+}
+
+input[type="file"],
+input[type="text"] {
+    width: 100%; /* Full width */
+    padding: 10px; /* Padding inside the inputs */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    margin-bottom: 20px; /* Space between inputs */
+}
+
+button {
+    width: 100%; /* Full width */
+    padding: 10px;
+    background-color: #4caf50; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+#message {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2rem; /* Larger text for messages */
+}
+
+.hidden {
+    display: none; /* Hide messages by default */
+}
+
+    </style>
+
 </head>
 <body>
     <header>
@@ -26,10 +91,24 @@
         </nav>
         
     </header>
-    <main><center>
-        <h2>Welcome to Our Sustainability Initiative</h2>
-        <p>Join us in making a positive impact on the environment.</p></center>
-    </main>
+    
+    
+        <div class="container">
+            <h1>Upload Your File</h1>
+            <form id="uploadForm">
+                <label for="fileInput">Choose a file:</label>
+                <input type="file" id="fileInput" required>
+    
+                <label for="textInput">Enter some text:</label>
+                <input type="text" id="textInput" placeholder="Your text here" required>
+    
+                <button type="submit">Upload</button>
+            </form>
+            <div id="message" class="hidden"></div>
+        </div>
+        <script src="script.js"></script>
+        
+    
     <footer>
         <p>&copy; 2024 Sustainability Project</p>
     </footer>

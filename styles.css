@@ -1,37 +1,38 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #e9f5e9; /* Fallback Light green background */
-    background-size: cover; /* Ensures the image covers the entire screen */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Prevent image from repeating */
+    font-family: 'Arial', sans-serif;
+    background-color: #e9f5e9; /* Light green background */
+    background-image: linear-gradient(135deg, #e9f5e9, #b2e1b0); /* Gradient background */
+    background-size: cover;
+    background-position: center;
     color: #333;
     margin: 0;
     padding: 0;
-    transition: background-color 0.5s ease; /* Smooth background color transition */
+    transition: background-color 0.5s ease;
 }
 
 header {
-    background-color: #4caf50; /* Green header */
+    background-color: #2d6a4f; /* Dark green header */
     color: white;
     padding: 1rem;
     text-align: center;
+    animation: slideDown 0.5s ease; /* Slide-down animation */
 }
 
 nav a {
     margin: 0 15px;
     color: white;
     text-decoration: none;
-    transition: color 0.3s; /* Color transition for links */
+    transition: color 0.3s, transform 0.3s; /* Color transition and scale on hover */
 }
 
 nav a:hover {
     color: #f1c40f; /* Yellow on hover */
+    transform: scale(1.1); /* Scale effect on hover */
 }
 
 main {
     padding: 20px;
     animation: fadeIn 1s; /* Fade-in animation for main content */
-    
 }
 
 @keyframes fadeIn {
@@ -39,56 +40,71 @@ main {
     to { opacity: 1; }
 }
 
+@keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
 footer {
-    background-color: #4caf50; /* Green footer */
+    background-color: #2d6a4f; /* Dark green footer */
     color: white;
     text-align: center;
     padding: 1rem;
     position: relative;
-    bottom: 0;
     width: 100%;
+    bottom: 0;
 }
 
 /* Form styling */
 form {
-    width: 50%; /* Set the width to 50% of the parent container */
+    width: 50%;
     border: 2px solid #4caf50; /* Green border for forms */
-    padding: 30px; /* Increased padding for better spacing */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-    background-color: #fff; /* White background for forms */
-    text-align: center; /* Center the text inside the form */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow effect */
+    background-color: #ffffff; /* White background for forms */
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center form inputs */
+    align-items: center;
     justify-content: center;
+    transition: transform 0.3s; /* Form scaling on hover */
+}
+
+form:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
 }
 
 /* Center and style labels */
 form label {
     margin: 10px 0;
-    font-size: 1.1rem; /* Optional: slightly increase label size */
-    text-align: left; /* Align label text to the left */
-    width: 100%; /* Ensure labels span the width of the form */
+    font-size: 1.1rem;
+    text-align: left;
+    width: 100%;
+    color: #2d6a4f; /* Dark green label */
 }
 
 /* Style inputs with proper indentation */
-form input {
-    width: 90%; /* Set input width to 90% of form width */
+form input,
+form textarea {
+    width: 90%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #4caf50; /* Green border */
     border-radius: 5px;
-    transition: border-color 0.3s; /* Border color transition */
-    box-sizing: border-box; /* Ensure padding doesn't affect input width */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Border color and shadow transition */
+    box-sizing: border-box;
 }
-form textarea{
-    width: 90%;
+
+form input:focus,
+form textarea:focus {
+    border-color: #1b4332; /* Darker green on focus */
+    box-shadow: 0 0 5px rgba(46, 125, 50, 0.5); /* Shadow on focus */
 }
 
 /* Button styling */
 form button {
-    width: 50%; /* Make the button half the form's width */
+    width: 50%;
     background-color: #4caf50; /* Green button */
     color: white;
     padding: 10px;
@@ -115,60 +131,59 @@ body {
 }
 
 header {
-    background-color: #4caf50; /* Green header */
-    color: white;
-    padding: 1rem;
-    text-align: center;
+    animation: slideDown 0.5s ease; /* Add slide-down effect to the header */
 }
 
 main {
-    flex: 1; /* Allows main content to grow and take up available space */
+    flex: 1;
     padding: 20px;
     animation: fadeIn 1s; /* Fade-in animation for main content */
 }
 
 footer {
-    background-color: #4caf50; /* Green footer */
+    background-color: #2d6a4f; /* Dark green footer */
     color: white;
     text-align: center;
     padding: 1rem;
-    position: relative;
     width: 100%;
-    bottom: 0;
 }
-
 
 /* Flexbox layout for the container to display 3 cards per row */
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Ensure spacing between cards */
-    margin: 0 auto; /* Center the container */
+    justify-content: space-between;
+    margin: 0 auto;
     padding: 20px;
 }
 
 /* Card styles */
 .card {
-    border: 3px solid #2e7d32; /* Dark green for border to represent sustainability */
+    border: 3px solid #2e7d32; /* Dark green border */
     border-radius: 8px;
     padding: 15px;
     margin: 10px;
-    width: 30%; /* Ensures three cards per row */
+    width: 30%;
     background-color: #e8f5e9; /* Light green background */
-    box-sizing: border-box; /* Include padding and border in the element's total width */
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-sizing: border-box;
+    transition: transform 0.3s, box-shadow 0.3s; /* Transition for hover effects */
+    position: relative; /* Position for child elements */
 }
 
 .card:hover {
     box-shadow: 0 8px 15px rgba(0, 128, 0, 0.3); /* Green shadow on hover */
-    transform: scale(1.05); /* Slight zoom effect on hover */
+    transform: scale(1.05); /* Zoom effect on hover */
 }
 
-/* Image within the card */
 .card img {
     width: 100%;
     height: auto;
     border-radius: 8px;
+    transition: transform 0.3s; /* Transition for images */
+}
+
+.card img:hover {
+    transform: scale(1.1); /* Zoom effect on image hover */
 }
 
 /* Text styling */
@@ -176,6 +191,11 @@ footer {
     color: #1b5e20; /* Dark green for headings */
     margin: 10px 0;
     text-align: center;
+    transition: color 0.3s; /* Transition for heading color */
+}
+
+.card h2:hover {
+    color: #4caf50; /* Change color on hover */
 }
 
 .card p {
@@ -197,15 +217,16 @@ footer {
     }
 }
 
-
-
-
-
 /* Blog Post Section */
 .blog-posts .post {
     margin-bottom: 40px;
     padding: 20px;
     border-bottom: 2px solid #ddd;
+    transition: background-color 0.3s; /* Background color transition */
+}
+
+.blog-posts .post:hover {
+    background-color: #f0f8f0; /* Light green background on hover */
 }
 
 .blog-posts h2 {
@@ -238,6 +259,11 @@ footer {
     padding: 30px;
     border-radius: 10px;
     margin-top: 50px;
+    transition: transform 0.3s; /* Transform transition for hover effect */
+}
+
+.share-experience:hover {
+    transform: translateY(-3px); /* Slight lift on hover */
 }
 
 .share-experience h2 {
@@ -265,8 +291,16 @@ footer {
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 1rem;
+    transition: border-color 0.3s; /* Border color transition */
 }
 
+.share-experience input[type="text"]:focus,
+.share-experience input[type="email"]:focus,
+.share-experience textarea:focus {
+    border-color: #2d6a4f; /* Dark green on focus */
+}
+
+/* Button styling */
 .share-experience button {
     background-color: #2d6a4f;
     color: #fff;
@@ -279,7 +313,7 @@ footer {
 }
 
 .share-experience button:hover {
-    background-color: #1b4332;
+    background-color: #1b4332; /* Darker green on hover */
 }
 
 /* Media Queries */
@@ -300,10 +334,16 @@ footer {
         font-size: 1.8rem;
     }
 }
+
 .styled-img {
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border: 5px solid #4CAF50;
     width: 250px;
     height: 250px;
+    transition: transform 0.3s; /* Image hover transition */
+}
+
+.styled-img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
 }

@@ -25,6 +25,12 @@
         
     </header>
     <main>
+        <script>
+            function redirectToIndex() {
+                window.location.href = "index.html"; // Redirects to index.html
+            }
+        </script>
+    
        <center> <h2>Create an Account</h2>
         <form id="signupForm">
             <label for="username">Username:</label>
@@ -33,7 +39,8 @@
             <label for="password">Password:</label>
             <input type="password" id="password" required>
 
-            <button type="submit">Signup</button>
+            <button type="submit" onclick="redirectToIndex()">Signup</button>
+
         </form>
        <p>Already have an account? <a href="login.html">Login here</a></p></center>
     </main>

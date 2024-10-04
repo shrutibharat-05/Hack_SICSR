@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deforestation by City</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+   /* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #a8e0cf, #f2e6e6); /* Gradient background */
+    color: #333;
+    text-align: center;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.container {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px; /* Add padding to the container */
+    background-color: rgba(255, 255, 255, 0.9); /* White background with some transparency */
+    border-radius: 8px; /* Rounded corners for the container */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+h1 {
+    font-size: 2.5em; /* Increase header font size */
+    color: #2c3e50; /* Darker color for the header */
+    margin-bottom: 20px; /* Space below the header */
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background with opacity */
+}
+
+.modal-content {
+    background-color: #fff; /* White background for modal */
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 8px; /* Rounded corners for the modal */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Soft shadow for modal */
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Deforestation by City</h1>
+        <canvas id="deforestationChart" width="600" height="400"></canvas>
+    </div>
+
+    <!-- Modal for showing city details -->
+    <div id="cityModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Cities with Deforestation</h2>
+            <ul id="cityList"></ul>
+        </div>
+    </div>
+
+    <script src="graph.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Sustainability Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.calendar-container {
+    margin: 50px auto;
+    width: 60%;
+}
+
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+#calendar div {
+    padding: 20px;
+    background-color: #2a9d8f;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#calendar div:hover {
+    background-color: #264653;
+}
+
+#event-form-container {
+    background-color: #fff;
+    padding: 20px;
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    display: none;
+}
+
+#event-form-container h2 {
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #2a9d8f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #264653;
+}
+    </style>
+</head>
+<body>
+    <div class="calendar-container">
+        <h1>Join an Event</h1>
+        <div id="calendar"></div>
+    </div>
+
+    <!-- Form for Joining Event -->
+    <div id="event-form-container" class="hidden">
+        <h2>Join Event on <span id="selected-date"></span></h2>
+        <form id="event-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <button type="submit">Join Event</button>
+        </form>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+    <footer>
+        <p>&copy; 2024 Sustainability Project</p>
+    </footer>
+</body>
+</html>

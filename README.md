@@ -1,4 +1,4 @@
-# GO GREEN... 
+# GO GREEN..
 
 ## Sustainability 
 ### Creating solutions that help preserve natural resources, reduce pollution, promote renewable energy, or support biodiversity. 
